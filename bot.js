@@ -9,6 +9,7 @@ const bot = new TelegramBot(process.env.API_TOKEN, { polling: true });
 let spendings = {};
 
 bot.on('message', (msg) => {
+  console.log('aaaaaa', msg);
   const chatId = msg.chat.id;
 
   // Split the message into an array of words
