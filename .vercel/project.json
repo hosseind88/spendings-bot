@@ -1,0 +1,8 @@
+{
+  "projectId": "prj_9EQimvQrgIiPjGsXSOVnc2K6NAAd",
+  "orgId": "1YiiSGEKDf0butv2yMS4oCJJ",
+  "version": 2,
+  "name": "spendings-bot",
+  "builds": [{ "src": "bot.js", "use": "@vercel/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "/bot.js" }]
+}
