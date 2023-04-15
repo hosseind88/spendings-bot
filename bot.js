@@ -1,6 +1,19 @@
 const TelegramBot = require('node-telegram-bot-api');
 const moment = require('jalali-moment');
 require('dotenv').config();
+const express = require('express');
+const path = require('path');
+
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send(`hello ${process.env.API_TOKEN}`);
+});
+
+app.listen(process.env.PORT || 3000, () => {
+  console.log('Server is running...');
+});
+
 
 // Replace YOUR_TOKEN_HERE with your actual bot token
 const bot = new TelegramBot(process.env.API_TOKEN, { polling: true });
