@@ -7,8 +7,8 @@ const path = require('path');
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'filename.js'));
+app.get('*', (req, res) => {
+  res.send('running');
 });
 
 app.listen(process.env.PORT || 3000, () => {
