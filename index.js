@@ -13,6 +13,7 @@ const bot = new TelegramBot(process.env.API_TOKEN, { polling: true });
 let spendings = {};
 
 app.get('*', (req, res) => {
+  console.log('aaaaaa ppp');
   bot.on('message', (msg) => {
     console.log('aaaaaa', msg);
     const chatId = msg.chat.id;
